@@ -1,0 +1,43 @@
+.board {
+  display: grid;
+  position: relative;
+
+  width: 600px;
+  height: 600px;
+  margin: 40px auto;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid $light-gray;
+  border-right: none;
+  border-bottom: none;
+}
+
+.tile-right {
+  border-right: 1px solid $light-gray;
+}
+
+.tile-bottom {
+  border-bottom: 1px solid $light-gray;
+}
+
+.tile-snake {
+  background-color: $blue;
+}
+
+.tile-apple {
+  &::before {
+    display: block;
+
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: $red;
+
+    content: '';
+  }
+}
